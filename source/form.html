@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Пинк</title>
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <header class="page-header">
+      <div class="block-center">
+        <a class="page-header__logo" aria-label="Ссылка на главную страницу">
+          <img class="page-header__logo-img" src="#" width="" height="" alt="PINK">
+        </a>
+
+        <!-- МЕНЮ -->
+        <nav class="main-nav">
+          <!-- В button-close создадим крестик, а в main-nav__toggle назначим ему отступы -->
+          <button class="main-nav__toggle button-burger" type="button">Меню</button>
+          <!-- Можно ли обойтись одной кнопкой и просто менять у неё значок при нажатии? Какой вариант лучше выбрать? -->
+          <button class="main-nav__toggle button-close"></button>
+          <ul class="main-nav__list menu">
+            <li>
+              <a class="menu__item menu__item--acrive" href="index.html" aria-label="Ссылка на главную страницу">Главная</a>
+            </li>
+            <li>
+              <a class="menu__item" href="photo.html" aria-label="Ссылка на страницу с фото">Фотографии</a>
+            </li>
+            <li>
+              <a class="menu__item" aria-label="Ссылка на страницу с конкурсом">Конкурс</a>
+            </li>
+            <li>
+              <a class="menu__item" href="https://htmlacademy.ru/" aria-label="Ссылка на страницу HTML Academy">HTML Academy</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- <img class="page-header__form-img" src="#" width="#" height="#" alt="Фото в серых тонах"> -->
+      <p class="page-header__title block-center">
+        Конкурс на самое безбашенное путешествие с Пинк
+      </p>
+    </header>
+
+    <main>
+
+      <!-- ФОРМА -->
+      <form class="form-yourhistory yourhistory" method="GET" action="https://echo.htmlacademy.ru">
+
+        <h1 class="visually-hidden">Форма для отправки истории</h1>
+        <p class="yourhistory__title block-center">
+          Поделитесь своей историей и получите шанс выиграть ценный приз —
+          1000 миль на вашу бонусную карту!
+        </p>
+
+
+        <!-- ФИО -->
+        <fieldset class="fio block-center">
+          <legend class="visually-hidden">Фамилия, имя, отчество</legend>
+          <label class="fio__name">
+            Фамилия:
+            <input type="text" name="person-last-name" value="" placeholder="Укажите фамилию *" required>
+          </label>
+          <label class="fio__name">
+            Имя:
+            <input type="text" name="person-first-name" value="" placeholder="Введите Ваше имя *" required>
+          </label>
+          <label class="fio__name">
+            Отчество:
+            <input type="text" name="person-middle-name" value="" placeholder="Ну и отчество тоже">
+          </label>
+        </fieldset>
+
+        <!-- ДОСТИЖЕНИЯ -->
+        <fieldset class="achivement block-center">
+          <legend class="achivement__legend">Ваши безбашенные достижения в путешествии</legend>
+          <div class="achivement__checkbox">
+            <input name="shark" type="checkbox" id="check-shark" checked>
+            <label for="check-shark">Сделал селфи с акулой</label>
+          </div>
+          <div class="achivement__checkbox">
+            <input name="sunburnt" type="checkbox" id="check-sunburnt" checked>
+            <label for="check-sunburnt">Обгорел на пляже</label>
+          </div>
+          <div class="achivement__checkbox">
+            <input name="chack-noris" type="checkbox" id="check-chack">
+            <label for="check-chack">Видел Чака Норриса</label>
+          </div>
+          <div class="achivement__checkbox">
+            <input name="souvenir" type="checkbox" id="check-souvenir">
+            <label for="check-souvenir">Накупил сувениров</label>
+          </div>
+          <div class="achivement__checkbox">
+            <input name="tower" type="checkbox" id="check-tower" checked>
+            <label for="check-tower">Удержал башню</label>
+          </div>
+          <div class="achivement__checkbox">
+            <input name="hotel" type="checkbox" id="check-hotel">
+            <label for="check-hotel">Разгромил отель</label>
+          </div>
+        </fieldset>
+
+        <!-- КОНТАКТЫ -->
+        <fieldset class="user-info block-center">
+          <legend class="visually-hidden">Контактная информация</legend>
+          <div class="user-info__item">
+            <input type="tel" name="phone" value="Номер, пожалуйста" id="phone">
+            <label for="phone">Номер телефона</label>
+          </div>
+          <div class="user-info__item">
+            <input type="email" name="email" value="Введите почту *" id="email">
+            <label for="email">Адрес почты</label>
+          </div>
+        </fieldset>
+
+        <!-- ПРИЛОЖЕНИЯ -->
+        <fieldset class="application block-center">
+          <legend class="application__legend">С каким приложением путешествовали?</legend>
+          <div class="application__radio-button">
+            <input type="radio" name="application" value="ios" id="radio-ios" checked>
+            <label for="radio-ios">Pink для iOS</label>
+          </div>
+          <div class="application__radio-button">
+            <input type="radio" name="application" value="android" id="radio-android">
+            <label for="radio-android">Pink на Android</label>
+          </div>
+          <div class="application__radio-button">
+            <input type="radio" name="application" value="windows-phone" id="radio-windows-phone">
+            <label for="radio-windows-phone">Windows Phone</label>
+          </div>
+        </fieldset>
+
+        <!-- ТЕКСТ -->
+        <fieldset class="your-emotion block-center">
+          <legend class="your-emotion__legend">Опишите свои эмоции</legend>
+          <textarea name="person-text" rows="5" cols="1200" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+        </fieldset>
+
+        <button class="yourhistory__button form-button" type="submit">
+          <strong>Отправить форму</strong>
+        </button>
+        <span class="yourhistory__text">
+          <span>*</span> — обязательные для заполнения поля
+        </span>
+      </form>
+
+    </main>
+
+    <!-- ПОДВАЛ -->
+    <footer class="page-footer block-center">
+      <a class="page-footer__logo" aria-label="Ссылка на главную страницу">
+        <img class="page-footer__logo-img" src="#" width="" height="" alt="PINK">
+      </a>
+      <ul class="page-footer__social social">
+        <li class="social__item">
+          <a class="social__link" href="#" aria-label="Наш аккаунт в Твиттере"></a>
+        </li>
+        <li class="social__item">
+          <a class="social__link" href="#" aria-label="Наш аккаунт в Фейсбуке"></a>
+        </li>
+        <!-- !!!!!!!!!!!!!!!!! -->
+        <!-- Узнать что это -->
+        <li class="social__item">
+          <a class="social__link" href="#" aria-label="Наш аккаунт в "></a>
+        </li>
+        <!-- !!!!!!!!!!!!!!!!! -->
+      </ul>
+      <div class="page-footer__copyright copyright">
+        <b class="copyright__text">Разработано</b>
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+      </div>
+    </footer>
+  </body>
+</html>

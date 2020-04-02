@@ -1,0 +1,42 @@
+.page-header{
+  background-color: @maincolor;
+  color: @contrastmaincolor;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  &__nav{
+    background-image: url("../img/bg-back-mobile@1x.jpg");
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 28px;
+  }
+  &__logo{
+    position: absolute;
+    top: 21px;
+    margin-left: 20px;
+  }
+  &__vuewrap{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &__title{
+    margin: 0;
+    padding-top: 23px;
+    align-self: center;
+    text-align: center;
+    line-height: 30px;
+    width: 240px;
+    font-family: "Open Sans Light";
+    font-size: 24px;
+    margin-bottom: 28px;
+  }
+}
+
+.page-header__logo--menu{
+  margin-bottom: 0;
+  background-color: @maincolor;
+}
