@@ -137,66 +137,47 @@
           </g>
         </svg> -->
         <div class="slider">
-          <input type="radio" id="slide1" name="review" checked>
-          <input type="radio" id="slide2" name="review">
-          <input type="radio" id="slide3" name="review">
-          <!-- <div class="slider__list"> -->
-            <div class="slider__block" id="one">
-                <img src="img/iphone-hand-mobile@1x.png" width="258" height="286" alt="Розовое фото">
-              <!-- <blockquote class="slider__item">
-                <p class="slider__review">
-                  «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи!
-                  А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
-                </p>
-                <cite class="slider__author">
-                  <strong class="slider__author-name">Николай Петров</strong>
-                   <span class="slider__author-job">25 лет, водитель трамвая</span>
-                </cite>
-              </blockquote> -->
-              <label class="slider__prev" for="slide3">
-                <span></span>
-              </label>
-              <label class="slider__next" for="slide2">
-                <span></span>
-              </label>
-            </div>
+          <input type="radio" id="slide1" class="slide1" name="review" checked>
+          <input type="radio" id="slide2" class="slide2" name="review">
+          <input type="radio" id="slide3" class="slide3" name="review">
+          <div class="slider__list">
+            <div class="wrapper">
+              <div class="slider__block" id="one">
+                <blockquote class="slider__item">
+                  <p class="slider__review">
+                    «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи!
+                    А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
+                  </p>
+                  <cite class="slider__author">
+                    <strong class="slider__author-name">Николай Петров</strong>
+                    <span class="slider__author-job">25 лет, водитель трамвая</span>
+                  </cite>
+                </blockquote>
+              </div>
 
-            <div class="slider__block" id="two">
-                <img src="img/iphone-hand-mobile@1x.png" width="258" height="286" alt="Розовое фото">
-              <!-- <blockquote class="slider__item visually-hidden">
-                <p class="slider__review">
-                  «Отличное приложение для поднятия настроения!!»
-                </p>
-                <cite class="slider__author">
-                  <strong class="slider__author-name">Натали</strong>
-                  <span class="slider__author-job">22 года, исследователь</span>
-                </cite>
-              </blockquote> -->
-              <label class="slider__prev" for="slide1">
-                <span></span>
-              </label>
-              <label class="slider__next" for="slide3">
-                <span></span>
-              </label>
-            </div>
+              <div class="slider__block" id="two">
+                <blockquote class="slider__item">
+                  <p class="slider__review">
+                    «Отличное приложение для поднятия настроения!!»
+                  </p>
+                  <cite class="slider__author">
+                    <strong class="slider__author-name">Натали</strong>
+                    <span class="slider__author-job">22 года, исследователь</span>
+                  </cite>
+                </blockquote>
+              </div>
 
-            <div class="slider__block" id="three">
-                <img src="img/iphone-hand-mobile@1x.png" width="258" height="286" alt="Розовое фото">
-              <!-- <blockquote class="slider__item visually-hidden">
-                <p class="slider__review">
-                  «Супер! Выходят просто замечательные снимки!»
-                </p>
-                <cite class="slider__author">
-                  <strong class="slider__author-name">Мурка</strong>
-                   <span class="slider__author-job">Кот, начинающий фотограф</span>
-                </cite>
-              </blockquote> -->
-              <label class="slider__prev" for="slide2">
-                <span></span>
-              </label>
-              <label class="slider__next" for="slide1">
-                <span></span>
-              </label>
+              <div class="slider__block" id="three">
+                <blockquote class="slider__item">
+                  <p class="slider__review">
+                    «Супер! Выходят просто замечательные снимки!»
+                  </p>
+                  <cite class="slider__author">
+                    <strong class="slider__author-name">Мурка</strong>
+                    <span class="slider__author-job">Кот, начинающий фотограф</span>
+                  </cite>
+                </blockquote>
+              </div>
             </div>
 
             <!-- Кнопки "Назад" "Вперед" -->
@@ -211,11 +192,11 @@
               </svg>
             </button> -->
           <!-- </div> -->
-
+          </div>
           <div class="slider__dots">
-            <label class="slider__dots-item" for="slide1" id="dot1"></label>
-            <label class="slider__dots-item" for="slide2" id="dot2"></label>
-            <label class="slider__dots-item" for="slide3" id="dot3"></label>
+            <label for="slide1" id="dot1"></label>
+            <label for="slide2" id="dot2"></label>
+            <label for="slide3" id="dot3"></label>
           </div>
         </div>
       </section>
@@ -314,11 +295,11 @@
             </span>
           </div>
         </div>
-        <div class="slider__dots">
+        <!-- <div class="slider__dots">
           <label class="slider__dots-item" for="slide1"></label>
           <label class="slider__dots-item" for="slide2"></label>
           <label class="slider__dots-item" for="slide3"></label>
-        </div>
+        </div> -->
       </section>
 
       <!-- КОНТАКТЫ -->

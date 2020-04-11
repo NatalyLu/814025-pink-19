@@ -1,129 +1,121 @@
 .slider {
-  margin: 0 auto;
-  margin-top: 20px;
+  .block-center;
   position: relative;
-  // width: $big_width;
-  // height: 0;
-  // padding-bottom: $big_height;
-  user-select: none;
-  background-color: #1c1c1c;
-  // box-shadow: $box-shadow;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  padding-top: 40px;
+  overflow: hidden;
+  background-color: @contrastmaincolor;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 94%, 0% 100%);
 
-
-  input {
+  input{
     display: none;
   }
 
-  .slider__block {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-
-    // .slider__item {
-    // 	width: inherit;
-    // 	height: inherit;
-    // }
-
-    .slider__prev,
-    .slider__next {
-      width: 12%;
-      // height: inherit;
-      position: absolute;
-      top: 0;
-      background-color: pink;
-      z-index: 99;
-      transition: 0.5s;
-      cursor: pointer;
-      text-align: center;
-    }
-
-    .slider__next {
-      right: 0;
-    }
-
-    .slider__prev {
-      left: 0;
-    }
-
-    .slider__prev:hover,
-    .slider__next:hover {
-      transition: 0.3s;
-      background-color: red;
-    }
-
-    .slider__prev span,
-    .slider__next span {
-      position: absolute;
-      width: 0;
-      height: 0;
-      border: solid 20px;
-      top: 50%;
-      transform: translateY(-50%);
-    }
-
-    .slider__prev span {
-      border-color: transparent #ffffff transparent transparent;
-      right: 35%;
-    }
-
-    .slider__next span {
-      border-color: transparent transparent transparent #ffffff;
-      left: 35%;
-    }
-  }
-
-  .slider__dots {
-    width: 100%;
-    bottom: 12%;
-    height: 11px;
-    position: absolute;
-    text-align: center;
-    z-index: 99;
-    cursor: default;
-
-    .slider__dots-item {
-      top: -5px;
-      width: 18px;
-      height: 18px;
-      margin: 0 3px;
-      position: relative;
-      border-radius: 100%;
-      display: inline-block;
-      background-color: rgba(0, 0, 0, 0.6);
-      transition: 0.4s;
-      cursor: pointer;
-    }
-
-    // #dot1:hover {
-    //   background: black;
-    // }
-
-    // #dot2:hover {
-    //   background: brown;
-    // }
-
-    // #dot3:hover {
-    //   background: blue;
-    // }
+  .wrapper {
+    width: 300%;
+    line-height: 0;
+    transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
   }
 }
 
-// #slide1:checked ~ #one,
-// #slide2:checked ~ #two,
-// #slide3:checked ~ #three {
-//   z-index: 9;
-//   animation: scroll 1s ease-in-out;
-// }
+.slider__list {
+  margin-bottom: 35px;
+}
 
-// #slide1:checked ~ .slider__dots-item #dot1 {
-//   background: black;
-// }
+.slider__block {
+  width: 33.3%;
+  float: left;
+  min-height: 224px;
 
-// #slide2:checked ~ .slider__dots-item #dot2 {
-//   background: brown;
-// }
+  img {
+  width: 100%;
+  }
+}
 
-// #slide3:checked ~ .slider__dots-item #dot3 {
-//   background: blue;
-// }
+.slider__item {
+  .drop__list-style;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  font-family: "Open Sans Light", sans-serif;
+  font-size: 14px;
+  line-height: 2.14;
+}
+
+.slider__review {
+  .drop__list-style;
+  .block-center;
+  width: 280px;
+  line-height: 2.2;
+  letter-spacing: 0.3px;
+}
+
+.slider__author {
+  order: -1;
+  margin-bottom: 6px;
+}
+
+.slider__author-name {
+  font-family: "Open Sans Bold", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+}
+
+.slider__author-job {
+  display: none;
+}
+
+.slider__dots {
+  margin-bottom: 64px;
+  display: flex;
+  width: 100px;
+  height: 20px;
+  align-items: center;
+  justify-content: center;
+
+  label {
+    cursor: pointer;
+    border-radius: 50%;
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background: @maincolor;
+    opacity: 0.3;
+    margin-right: 20px;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.1;
+    }
+  }
+
+  label:last-child {
+    margin-right: 0;
+  }
+}
+
+/* позиция изображения при переключении */
+.slide1:checked ~ .slider__list .wrapper{
+  margin-left: 0;
+}
+.slide2:checked ~ .slider__list .wrapper{
+  margin-left: -100%;
+}
+.slide3:checked ~ .slider__list .wrapper{
+  margin-left: -200%;
+}
+
+.slide1:checked ~ .slider__dots label:nth-child(1),
+.slide2:checked ~ .slider__dots label:nth-child(2),
+.slide3:checked ~ .slider__dots label:nth-child(3){
+  background: @contrastmaincolor;
+  box-shadow: 0px 0px 0px 3px @maincolor;
+  // border: 3px solid @maincolor;
+  opacity: 1;
+}
