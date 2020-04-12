@@ -5,16 +5,15 @@
   flex-direction: column;
   text-align: center;
   align-items: center;
-  padding-top: 40px;
+  // padding-top: 40px;
   overflow: hidden;
-  background-color: @contrastmaincolor;
-  clip-path: polygon(0% 0%, 100% 0%, 100% 94%, 0% 100%);
+  // background-color: @contrastmaincolor;
 
   input {
     display: none;
   }
 
-  .wrapper {
+  &__wrapper {
     width: 300%;
     line-height: 0;
     transition: all 800ms cubic-bezier(0.77, 0, 0.175, 1);
@@ -22,17 +21,13 @@
 }
 
 .slider__list {
-  margin-bottom: 35px;
+  margin-bottom: 32px;
 }
 
 .slider__block {
   width: 33.3%;
   float: left;
   min-height: 224px;
-
-  img {
-    width: 100%;
-  }
 }
 
 .slider__item {
@@ -69,10 +64,8 @@
 }
 
 .slider__dots {
-  margin-bottom: 64px;
+  margin-bottom: 34px;
   display: flex;
-  width: 100px;
-  height: 20px;
   align-items: center;
   justify-content: center;
 
@@ -84,7 +77,7 @@
     height: 6px;
     background: @maincolor;
     opacity: 0.3;
-    margin-right: 20px;
+    margin-right: 18px;
 
     &:hover {
       opacity: 0.6;
@@ -101,15 +94,18 @@
 }
 
 /* позиция изображения при переключении */
-.slide1:checked ~ .slider__list .wrapper {
+#slide1-reviews:checked ~ .slider__list .slider__wrapper,
+#slide1-tariffs:checked ~ .tariffs__table .slider__wrapper {
   margin-left: 0;
 }
 
-.slide2:checked ~ .slider__list .wrapper {
+#slide2-reviews:checked ~ .slider__list .slider__wrapper,
+#slide2-tariffs:checked ~ .tariffs__table .slider__wrapper {
   margin-left: -100%;
 }
 
-.slide3:checked ~ .slider__list .wrapper {
+#slide3-reviews:checked ~ .slider__list .slider__wrapper,
+#slide3-tariffs:checked ~ .tariffs__table .slider__wrapper {
   margin-left: -200%;
 }
 
@@ -117,7 +113,6 @@
 .slide2:checked ~ .slider__dots label:nth-child(2),
 .slide3:checked ~ .slider__dots label:nth-child(3) {
   background: @contrastmaincolor;
-  box-shadow: 0 0 0 3px @maincolor;
-  // border: 3px solid @maincolor;
+  border: 3px solid @maincolor;
   opacity: 1;
 }
