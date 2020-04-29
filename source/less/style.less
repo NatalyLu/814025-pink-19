@@ -7,24 +7,17 @@
 @import url("components/adv-list.less");
 @import url("components/slider.less");
 @import url("components/button.less");
-
-// @import url("components/h1-style.less");
-// @import url("components/button.less");
-// @import url("components/advantages.less");
-// @import url("components/adv.less");
-// @import url("components/affect.less");
-// @import url("components/reviews.less");
-// @import url("components/slider.less");
-// @import url("components/tariffs.less");
-// @import url("components/hit.less");
-// @import url("components/contacts.less");
-
+@import url("components/reviews.less");
+@import url("components/triangle.less");
+@import url("components/tariffs.less");
+@import url("components/contacts.less");
 
 @addition: #d22856;
 @contrastmaincolor: white;
 @mainbackground:#f2f2f2;
-@maincolor: #1d2631;
-@shadowLight: #485461;
+@tableborder: #e5e5e5;
+@maincolor: #283645; // #1d2631;
+@shadowLight: rgba(255, 255, 255, 0.15); // #485461;
 @shadowDark: black;
 
 @font-face {
@@ -51,4 +44,9 @@ body {
   font-family: "Open Sans", sans-serif;
   font-size: 18px;
   color: @maincolor;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
