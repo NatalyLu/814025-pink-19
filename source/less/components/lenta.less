@@ -1,0 +1,65 @@
+.lenta {
+  .drop__list-style();
+  display: flex;
+  flex-direction: column;
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    margin: 0 @indentmobile 20px @indentmobile;
+  }
+
+  &__item:first-child {
+    margin: 0;
+    margin-bottom: 20px;
+
+    .lenta__description {
+      margin: 0 @indentmobile;
+    }
+  }
+
+  &__item:last-child {
+    margin-bottom: 0;
+  }
+
+  &__description {
+    display: flex;
+    flex-direction: column;
+    background-color: @mainbackground;
+    padding: 20px 10px 20px 17px;
+  }
+
+  &__author {
+    font-style: normal;
+  }
+
+  &__author-name {
+    font-family: "Open Sans Bold", sans-serif;
+  }
+
+  &__time {
+    font-family: "Open Sans Light", sans-serif;
+    font-size: 12px;
+    line-height: 1.8;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    margin: 0;
+    margin-bottom: 14px;
+  }
+
+  &__like {
+    display: flex;
+    font-size: 12px;
+    line-height: 1.8;
+    text-transform: uppercase;
+    color: @addition;
+
+    svg {
+      fill: @addition;
+      align-self: center;
+      margin-right: 20px;
+    }
+  }
+}
