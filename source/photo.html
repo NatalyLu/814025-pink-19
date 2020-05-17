@@ -7,55 +7,66 @@
   </head>
   <body>
     <header class="page-header">
-      <div class="block-center">
-        <a class="page-header__logo" aria-label="Ссылка на главную страницу">
-          <img class="page-header__logo-img" src="#" width="" height="" alt="PINK">
-        </a>
-
+      <div class="page-header__nav page-header__nav--photo">
         <!-- МЕНЮ -->
         <nav class="main-nav">
-          <!-- В button-close создадим крестик, а в main-nav__toggle назначим ему отступы -->
-          <button class="main-nav__toggle button-burger" type="button">Меню</button>
-          <!-- Можно ли обойтись одной кнопкой и просто менять у неё значок при нажатии? Какой вариант лучше выбрать? -->
-          <button class="main-nav__toggle button-close"></button>
-          <ul class="main-nav__list menu">
+          <!-- BUTTON BURGER -->
+          <input class="button-burger__input" id="burger" type="checkbox">
+
+          <div class="main-nav__first-line-menu"></div>
+
+          <label  class="button-burger" for="burger">
+            <span class="button-burger__lines"></span>
+          </label>
+          <a class="page-header__logo" href="#" aria-label="Ссылка на главную страницу">
+            <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="74.426px" height="22.859px" viewBox="0 0 74.426 22.859" enable-background="new 0 0 74.426 22.859" xml:space="preserve">
+              <g>
+                <path fill="#FFFFFF" d="M0,1.449c0-0.708,0.58-1.288,1.256-1.288h7.18c5.087,0,8.436,2.704,8.436,7.147v0.064 c0,4.861-4.057,7.373-8.854,7.373H2.544v6.825c0,0.708-0.58,1.288-1.288,1.288C0.58,22.859,0,22.279,0,21.571V1.449z M8.114,12.428 c3.734,0,6.182-1.996,6.182-4.958V7.405c0-3.22-2.415-4.894-6.054-4.894H2.544v9.917H8.114z"/>
+                <path fill="#FFFFFF" d="M21.729,1.288C21.729,0.58,22.308,0,22.983,0c0.709,0,1.288,0.58,1.288,1.288v20.283 c0,0.708-0.579,1.288-1.288,1.288c-0.676,0-1.255-0.58-1.255-1.288V1.288z"/>
+                <path fill="#FFFFFF" d="M30.87,1.32c0-0.676,0.579-1.256,1.256-1.256h0.354c0.58,0,0.934,0.29,1.288,0.74l13.684,17.45V1.256 C47.451,0.58,47.998,0,48.707,0c0.676,0,1.223,0.58,1.223,1.256v20.348c0,0.676-0.482,1.191-1.158,1.191h-0.129 c-0.548,0-0.934-0.322-1.32-0.772L33.349,4.153v17.45c0,0.676-0.547,1.256-1.255,1.256c-0.677,0-1.224-0.58-1.224-1.256V1.32z"/>
+                <path fill="#FFFFFF" d="M56.3,1.288C56.3,0.58,56.879,0,57.556,0c0.708,0,1.287,0.58,1.287,1.288v12.331L71.689,0.451 C71.979,0.193,72.269,0,72.688,0c0.676,0,1.224,0.612,1.224,1.256c0,0.354-0.161,0.644-0.419,0.901l-7.984,7.92l8.564,10.561 c0.225,0.29,0.354,0.547,0.354,0.934c0,0.676-0.579,1.288-1.287,1.288c-0.483,0-0.806-0.258-1.03-0.58l-8.403-10.463l-4.862,4.861 v4.894c0,0.708-0.579,1.288-1.287,1.288c-0.677,0-1.256-0.58-1.256-1.288V1.288z"/>
+              </g>
+            </svg>
+          </a>
+
+          <ul id="findme" class="main-nav__list">
             <li>
-              <a class="menu__item menu__item--acrive" href="index.html" aria-label="Ссылка на главную страницу">Главная</a>
+              <a href="index.html" aria-label="Ссылка на главную страницу">Главная</a>
+            </li>
+            <li class="main-nav__item--active">
+              <a aria-label="Ссылка на страницу с фотографиями">Фотографии</a>
             </li>
             <li>
-              <a class="menu__item" aria-label="Ссылка на страницу с фото">Фотографии</a>
+              <a href="form.html" aria-label="Ссылка на страницу с конкурсом">Конкурс</a>
             </li>
             <li>
-              <a class="menu__item" href="form.html" aria-label="Ссылка на страницу с конкурсом">Конкурс</a>
-            </li>
-            <li>
-              <a class="menu__item" href="https://htmlacademy.ru/" aria-label="Ссылка на страницу HTML Academy">HTML Academy</a>
+              <a href="https://htmlacademy.ru/" aria-label="Ссылка на страницу HTML Academy">HTML Academy</a>
             </li>
           </ul>
         </nav>
-      </div>
 
-      <p class="page-header__title block-center">
-        Фотографии пользователей
-      </p>
+        <div class="page-header__title page-header__title--photo">
+          Фотографии пользователей
+        </div>
+      </div>
     </header>
 
     <main>
 
       <!-- ЛЕНТА -->
-      <section class="top-photo">
+      <section class="photos">
         <h1 class="visually-hidden">Фото дня</h1>
-        <p class="top-photo__agitation block-center">
+        <p class="photos__agitation">
           Взгляните на фотографии, которые выкладывают пользователи!
           Видите, как не хватает ваших?
         </p>
-        <ul class="lenta block-center">
+        <ul class="lenta">
 
           <!-- ЭТО ДЛЯ КОМПА -->
           <!-- Первая строка -->
           <!-- ФОТО ДНЯ -->
           <li class="lenta__item">
-            <img class="lenta__img" src="#" width="" height="" alt="Мост над пропастью">
+            <img src="img/panorama-mobile@1x.jpg" width="320" height="137" alt="Мост над пропастью">
             <div class="lenta__description"><!--шрифт 14px-->
               <cite class="lenta__author">
                 <strong class="lenta__author-name">Анна</strong>
@@ -65,14 +76,18 @@
                 Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!
               </p>
               <span class="lenta__like"><!--12px-->
-                Нравится
-                <span class="lenta__value-likes">215</span>
+                <svg version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="12.545px" height="11.99px" viewBox="521.939 473.064 12.545 11.99" enable-background="new 521.939 473.064 12.545 11.99" xml:space="preserve">
+                  <g>
+                    <path d="M528.174,485.055c-0.212,0-0.412-0.091-0.552-0.249c-3.798-4.324-4.644-5.298-4.858-5.572l-0.004,0.0 c-0.529-0.675-0.821-1.518-0.821-2.373c0-2.095,1.704-3.799,3.799-3.799c0.934,0,1.804,0.32,2.484,0.898 c0.696-0.578,1.56-0.898,2.463-0.898c2.095,0,3.799,1.704,3.799,3.799c0,0.909-0.318,1.754-0.896,2.381l-4.86,5.561 C528.587,484.964,528.386,485.055,528.174,485.055L528.174,485.055z M523.929,478.349c0.208,0.255,2.471,2.839,4.243,4.858 l4.323-4.944c0.34-0.369,0.52-0.86,0.52-1.399c0-1.285-1.045-2.331-2.33-2.331c-0.729,0-1.421,0.344-1.9,0.943 c-0.142,0.178-0.353,0.267-0.585,0.275c-0.227-0.003-0.439-0.111-0.575-0.294c-0.441-0.587-1.129-0.925-1.887-0.925 c-1.285,0-2.33,1.046-2.33,2.331c0,0.678,0.275,1.171,0.507,1.467C523.919,478.336,523.925,478.342,523.929,478.349z"/>
+                  </g>
+                </svg>
+                Нравится: 215
               </span>
             </div>
           </li>
 
           <li class="lenta__item">
-            <img class="lenta__img" src="#" width="" height="" alt="Фото автомобиля">
+            <img src="img/photo-car-mobile@1x.jpg" width="280" height="180" alt="Фото автомобиля">
             <div class="lenta__description">
               <cite class="lenta__author">
                 <strong class="lenta__author-name">Левон</strong>
@@ -82,14 +97,18 @@
                 Вчера он на луну летал, сегодня в руки к нам попал.
               </p>
               <span class="lenta__like">
-                Нравится
-                <span class="lenta__value-likes">356</span>
+                <svg version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="12.545px" height="11.99px" viewBox="521.939 473.064 12.545 11.99" enable-background="new 521.939 473.064 12.545 11.99" xml:space="preserve">
+                  <g>
+                    <path d="M528.174,485.055c-0.212,0-0.412-0.091-0.552-0.249c-3.798-4.324-4.644-5.298-4.858-5.572l-0.004,0.0 c-0.529-0.675-0.821-1.518-0.821-2.373c0-2.095,1.704-3.799,3.799-3.799c0.934,0,1.804,0.32,2.484,0.898 c0.696-0.578,1.56-0.898,2.463-0.898c2.095,0,3.799,1.704,3.799,3.799c0,0.909-0.318,1.754-0.896,2.381l-4.86,5.561 C528.587,484.964,528.386,485.055,528.174,485.055L528.174,485.055z M523.929,478.349c0.208,0.255,2.471,2.839,4.243,4.858 l4.323-4.944c0.34-0.369,0.52-0.86,0.52-1.399c0-1.285-1.045-2.331-2.33-2.331c-0.729,0-1.421,0.344-1.9,0.943 c-0.142,0.178-0.353,0.267-0.585,0.275c-0.227-0.003-0.439-0.111-0.575-0.294c-0.441-0.587-1.129-0.925-1.887-0.925 c-1.285,0-2.33,1.046-2.33,2.331c0,0.678,0.275,1.171,0.507,1.467C523.919,478.336,523.925,478.342,523.929,478.349z"/>
+                  </g>
+                </svg>
+                Нравится: 356
               </span>
             </div>
           </li>
 
           <li class="lenta__item">
-            <img class="lenta__img" src="#" width="" height="" alt="барабаны">
+            <img src="img/photo-drumset-mobile@1x.jpg" width="280" height="180" alt="барабаны">
             <div class="lenta__description">
               <cite class="lenta__author">
                 <strong class="lenta__author-name">Антон</strong>
@@ -99,14 +118,18 @@
                 Соседи будут рады!
               </p>
               <span class="lenta__like">
-                Нравится
-                <span class="lenta__value-likes">666</span>
+                <svg version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="12.545px" height="11.99px" viewBox="521.939 473.064 12.545 11.99" enable-background="new 521.939 473.064 12.545 11.99" xml:space="preserve">
+                  <g>
+                    <path d="M528.174,485.055c-0.212,0-0.412-0.091-0.552-0.249c-3.798-4.324-4.644-5.298-4.858-5.572l-0.004,0.0 c-0.529-0.675-0.821-1.518-0.821-2.373c0-2.095,1.704-3.799,3.799-3.799c0.934,0,1.804,0.32,2.484,0.898 c0.696-0.578,1.56-0.898,2.463-0.898c2.095,0,3.799,1.704,3.799,3.799c0,0.909-0.318,1.754-0.896,2.381l-4.86,5.561 C528.587,484.964,528.386,485.055,528.174,485.055L528.174,485.055z M523.929,478.349c0.208,0.255,2.471,2.839,4.243,4.858 l4.323-4.944c0.34-0.369,0.52-0.86,0.52-1.399c0-1.285-1.045-2.331-2.33-2.331c-0.729,0-1.421,0.344-1.9,0.943 c-0.142,0.178-0.353,0.267-0.585,0.275c-0.227-0.003-0.439-0.111-0.575-0.294c-0.441-0.587-1.129-0.925-1.887-0.925 c-1.285,0-2.33,1.046-2.33,2.331c0,0.678,0.275,1.171,0.507,1.467C523.919,478.336,523.925,478.342,523.929,478.349z"/>
+                  </g>
+                </svg>
+                Нравится: 666
               </span>
             </div>
           </li>
 
           <li class="lenta__item">
-            <img class="lenta__img" src="#" width="" height="" alt="фото неба">
+            <img src="img/photo-window-mobile@1x.jpg" width="280" height="180" alt="фото неба">
             <div class="lenta__description">
               <cite class="lenta__author">
                 <strong class="lenta__author-name">Борис</strong>
@@ -116,15 +139,19 @@
                 Здесь могла быть ваша цитата о высоком и вечном.
               </p>
               <span class="lenta__like">
-                Нравится
-                <span class="lenta__value-likes">215</span>
+                <svg version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="12.545px" height="11.99px" viewBox="521.939 473.064 12.545 11.99" enable-background="new 521.939 473.064 12.545 11.99" xml:space="preserve">
+                  <g>
+                    <path d="M528.174,485.055c-0.212,0-0.412-0.091-0.552-0.249c-3.798-4.324-4.644-5.298-4.858-5.572l-0.004,0.0 c-0.529-0.675-0.821-1.518-0.821-2.373c0-2.095,1.704-3.799,3.799-3.799c0.934,0,1.804,0.32,2.484,0.898 c0.696-0.578,1.56-0.898,2.463-0.898c2.095,0,3.799,1.704,3.799,3.799c0,0.909-0.318,1.754-0.896,2.381l-4.86,5.561 C528.587,484.964,528.386,485.055,528.174,485.055L528.174,485.055z M523.929,478.349c0.208,0.255,2.471,2.839,4.243,4.858 l4.323-4.944c0.34-0.369,0.52-0.86,0.52-1.399c0-1.285-1.045-2.331-2.33-2.331c-0.729,0-1.421,0.344-1.9,0.943 c-0.142,0.178-0.353,0.267-0.585,0.275c-0.227-0.003-0.439-0.111-0.575-0.294c-0.441-0.587-1.129-0.925-1.887-0.925 c-1.285,0-2.33,1.046-2.33,2.331c0,0.678,0.275,1.171,0.507,1.467C523.919,478.336,523.925,478.342,523.929,478.349z"/>
+                  </g>
+                </svg>
+                Нравится: 215
               </span>
             </div>
           </li>
 
           <!-- Вторая строка -->
           <li class="lenta__item">
-            <img class="lenta__img" src="#" width="" height="" alt="Кубанская бахча">
+            <img src="img/photo-fair-mobile@1x.jpg" width="280" height="180" alt="Кубанская бахча">
             <div class="lenta__description">
               <cite class="lenta__author">
                 <strong class="lenta__author-name">Сергей</strong>
@@ -134,14 +161,18 @@
                 Самая кубанская в мире!
               </p>
               <span class="lenta__like">
-                Нравится
-                <span class="lenta__value-likes">4</span>
+                <svg version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="12.545px" height="11.99px" viewBox="521.939 473.064 12.545 11.99" enable-background="new 521.939 473.064 12.545 11.99" xml:space="preserve">
+                  <g>
+                    <path d="M528.174,485.055c-0.212,0-0.412-0.091-0.552-0.249c-3.798-4.324-4.644-5.298-4.858-5.572l-0.004,0.0 c-0.529-0.675-0.821-1.518-0.821-2.373c0-2.095,1.704-3.799,3.799-3.799c0.934,0,1.804,0.32,2.484,0.898 c0.696-0.578,1.56-0.898,2.463-0.898c2.095,0,3.799,1.704,3.799,3.799c0,0.909-0.318,1.754-0.896,2.381l-4.86,5.561 C528.587,484.964,528.386,485.055,528.174,485.055L528.174,485.055z M523.929,478.349c0.208,0.255,2.471,2.839,4.243,4.858 l4.323-4.944c0.34-0.369,0.52-0.86,0.52-1.399c0-1.285-1.045-2.331-2.33-2.331c-0.729,0-1.421,0.344-1.9,0.943 c-0.142,0.178-0.353,0.267-0.585,0.275c-0.227-0.003-0.439-0.111-0.575-0.294c-0.441-0.587-1.129-0.925-1.887-0.925 c-1.285,0-2.33,1.046-2.33,2.331c0,0.678,0.275,1.171,0.507,1.467C523.919,478.336,523.925,478.342,523.929,478.349z"/>
+                  </g>
+                </svg>
+                Нравится: 4
               </span>
             </div>
           </li>
 
           <li class="lenta__item">
-            <img class="lenta__img" src="#" width="" height="" alt="Вид с вершины горы">
+            <img src="img/photo-pov-mobile@1x.jpg" width="280" height="180" alt="Вид с вершины горы">
             <div class="lenta__description">
               <cite class="lenta__author">
                 <strong class="lenta__author-name">Максим</strong>
@@ -151,14 +182,18 @@
                 Где снег-то?
               </p>
               <span class="lenta__like">
-                Нравится
-                <span class="lenta__value-likes">150</span>
+                <svg version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="12.545px" height="11.99px" viewBox="521.939 473.064 12.545 11.99" enable-background="new 521.939 473.064 12.545 11.99" xml:space="preserve">
+                  <g>
+                    <path d="M528.174,485.055c-0.212,0-0.412-0.091-0.552-0.249c-3.798-4.324-4.644-5.298-4.858-5.572l-0.004,0.0 c-0.529-0.675-0.821-1.518-0.821-2.373c0-2.095,1.704-3.799,3.799-3.799c0.934,0,1.804,0.32,2.484,0.898 c0.696-0.578,1.56-0.898,2.463-0.898c2.095,0,3.799,1.704,3.799,3.799c0,0.909-0.318,1.754-0.896,2.381l-4.86,5.561 C528.587,484.964,528.386,485.055,528.174,485.055L528.174,485.055z M523.929,478.349c0.208,0.255,2.471,2.839,4.243,4.858 l4.323-4.944c0.34-0.369,0.52-0.86,0.52-1.399c0-1.285-1.045-2.331-2.33-2.331c-0.729,0-1.421,0.344-1.9,0.943 c-0.142,0.178-0.353,0.267-0.585,0.275c-0.227-0.003-0.439-0.111-0.575-0.294c-0.441-0.587-1.129-0.925-1.887-0.925 c-1.285,0-2.33,1.046-2.33,2.331c0,0.678,0.275,1.171,0.507,1.467C523.919,478.336,523.925,478.342,523.929,478.349z"/>
+                  </g>
+                </svg>
+                Нравится: 150
               </span>
             </div>
           </li>
 
           <li class="lenta__item">
-            <img class="lenta__img" src="#" width="" height="" alt="Фото крыла самолета">
+            <img src="img/photo-wing-mobile@1x.jpg" width="280" height="374" alt="Фото крыла самолета">
             <div class="lenta__description">
               <cite class="lenta__author">
                 <strong class="lenta__author-name">Надежда</strong>
@@ -168,8 +203,12 @@
                 Всем GM и взаимные лайки!
               </p>
               <span class="lenta__like">
-                Нравится
-                <span class="lenta__value-likes">2560</span>
+                <svg version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="12.545px" height="11.99px" viewBox="521.939 473.064 12.545 11.99" enable-background="new 521.939 473.064 12.545 11.99" xml:space="preserve">
+                  <g>
+                    <path d="M528.174,485.055c-0.212,0-0.412-0.091-0.552-0.249c-3.798-4.324-4.644-5.298-4.858-5.572l-0.004,0.0 c-0.529-0.675-0.821-1.518-0.821-2.373c0-2.095,1.704-3.799,3.799-3.799c0.934,0,1.804,0.32,2.484,0.898 c0.696-0.578,1.56-0.898,2.463-0.898c2.095,0,3.799,1.704,3.799,3.799c0,0.909-0.318,1.754-0.896,2.381l-4.86,5.561 C528.587,484.964,528.386,485.055,528.174,485.055L528.174,485.055z M523.929,478.349c0.208,0.255,2.471,2.839,4.243,4.858 l4.323-4.944c0.34-0.369,0.52-0.86,0.52-1.399c0-1.285-1.045-2.331-2.33-2.331c-0.729,0-1.421,0.344-1.9,0.943 c-0.142,0.178-0.353,0.267-0.585,0.275c-0.227-0.003-0.439-0.111-0.575-0.294c-0.441-0.587-1.129-0.925-1.887-0.925 c-1.285,0-2.33,1.046-2.33,2.331c0,0.678,0.275,1.171,0.507,1.467C523.919,478.336,523.925,478.342,523.929,478.349z"/>
+                  </g>
+                </svg>
+                Нравится: 2560
               </span>
             </div>
           </li>
@@ -177,34 +216,42 @@
       </section>
 
       <!-- ФИЛЬТРЫ -->
-      <section class="filter block-center">
+      <section class="filter">
         <h1 class="visually-hidden">Фильтры</h1>
         <p class="filter__agitation">
-          Затмите их всех!
+          Затмите их всех!<br>
           Выкладывайте все, что накопилось в телефоне!
         </p>
         <div class="filter__setup">
-          <img class="filter__img" src="#" width="" height="" alt="Зимнее фото (дорога в лесу)">
-          <div> <!--второй столбец-->
-            <div>
-              <div class="filter__item">
-                <div class="scale"></div>
-                <div class="toggle toggle"></div>
-              </div>
+          <!--второй столбец-->
+          <div class="filter__settings">
+            <img src="img/photo-road-mobile@1x.jpg" width="" height="" alt="Зимнее фото (дорога в лесу)">
+            <div class="filter__list">
+              <svg class="filter__item filter__item--active" version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="44px" height="44px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve">
+                <path fill="none" d="M0,0h48v48H0V0z"/>
+                <path d="M34,30h4V14c0-2.21-1.79-4-4-4H18v4h16V30z M14,34V2h-4v8H2v4h8v20c0,2.21,1.79,4,4,4h20v8h4v-8h8v-4H14z"/>
+              </svg>
 
-              <div class="filter__item">
-                <div class="scale"></div>
-                <div class="toggle toggle"></div>
-              </div>
+              <svg class="filter__item" version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="48px" height="43px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve">
+                <path fill="none" d="M0,0h48v48H0V0z"/>
+                <path d="M33.12,17.88L15.24,0l-2.83,2.83l4.76,4.76L6.88,17.88c-1.17,1.17-1.17,3.07,0,4.24l11,11C18.46,33.71,19.23,34,20,34 s1.54-0.29,2.12-0.88l11-11C34.29,20.95,34.29,19.05,33.12,17.88z M10.41,20L20,10.42L29.59,20H10.41z M38,23c0,0-4,4.33-4,7 c0,2.21,1.79,4,4,4s4-1.79,4-4C42,27.33,38,23,38,23z"/>
+                <rect y="40" width="48" height="3"/>
+              </svg>
 
-              <div class="filter__item">
-                <div class="scale"></div>
-                <div class="toggle toggle"></div>
-              </div>
+              <svg class="filter__item" version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="32px" height="32px" viewBox="-35.422 -7.96 31.92 31.92" enable-background="new -35.422 -7.96 31.92 31.92" xml:space="preserve">
+                <path fill="#231F20" d="M-19.462-3.96c6.595,0,11.96,5.365,11.96,11.96s-5.365,11.96-11.96,11.96S-31.422,14.595-31.422,8 S-26.057-3.96-19.462-3.96 M-19.462-7.96c-8.814,0-15.96,7.145-15.96,15.96c0,8.813,7.146,15.96,15.96,15.96S-3.502,16.813-3.502,8 C-3.502-0.815-10.648-7.96-19.462-7.96L-19.462-7.96z"/>
+                <path d="M-19.462,16.331c4.706,0,8.52-3.813,8.52-8.52c0-4.705-3.813-8.519-8.52-8.519"/>
+              </svg>
             </div>
-            <button class="button button-activ" type="submit">Запостить</button>
-            <button class="button" type="submit">Отмена</button>
+
+            <div class="filter__scale">
+              <div class="filter__line"></div>
+              <div class="filter__toggle"></div>
+            </div>
           </div>
+
+          <button class="filter__button button__oval button--active" type="submit">Запостить</button>
+          <button class="filter__button button__oval button--deactive" type="submit">Отмена</button>
         </div>
       </section>
     </main>

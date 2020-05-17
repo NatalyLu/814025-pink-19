@@ -1,54 +1,54 @@
 .main-nav {
   position: relative;
-}
 
-.main-nav__first-line-menu {
-  display: block;
-  width: 100%;
-  // Высота для полупрозрачного фона
-  height: 68px;
-  background-color: rgba(@shadowDark, 0.2);
-  transition: 0.3s linear;
-}
-
-.main-nav__list {
-  .drop__list-style();
-  background-color: @maincolor;
-  display: none;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: space-between;
-
-  li {
-    list-style-type: none;
-    display: flex;
-    border-top: 1px solid @shadowLight;
-    border-bottom: 1px solid @shadowDark;
-  }
-
-  li:first-child {
-    border-top: 1px solid @shadowDark;
-  }
-
-  a {
-    font-family: "Open Sans Bold", sans-serif;
-    font-size: 18px;
-    line-height: 1.3;
-    color: @contrastmaincolor;
-    text-decoration: none;
-    text-transform: uppercase;
-    padding-top: 20px;
-    padding-bottom: 19px;
-    text-align: center;
+  &__first-line-menu {
+    display: block;
     width: 100%;
+    // Высота для полупрозрачного фона
+    height: 68px;
+    background-color: rgba(@shadowDark, 0.2);
+    transition: 0.3s linear;
   }
 
-  li:last-child a {
-    padding-top: 19px;
-    padding-bottom: 19px;
-  }
-}
+  &__list {
+    .drop__list-style();
+    background-color: @maincolor;
+    display: none;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
 
-.main-nav__item--active {
-  border-top: 1px solid @shadowLight;
+    li {
+      list-style-type: none;
+      display: flex;
+      border-top: 1px solid @shadowLight;
+      border-bottom: 1px solid @shadowDark;
+    }
+
+    li:first-child {
+      box-shadow: 0 -1px 0 0 @shadowDark;
+    }
+
+    a {
+      font-family: "Open Sans Bold", sans-serif;
+      font-size: 18px;
+      line-height: 1.3;
+      color: @contrastmaincolor;
+      text-decoration: none;
+      text-transform: uppercase;
+      padding-top: 20px;
+      padding-bottom: 19px;
+      text-align: center;
+      width: 100%;
+    }
+
+    li:last-child a {
+      padding-top: 19px;
+      padding-bottom: 19px;
+    }
+
+    .main-nav__item--active {
+      border-top: none;
+    }
+  }
 }
