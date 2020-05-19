@@ -1,0 +1,25 @@
+.social {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  &__item {
+    position: relative;
+    // width: 35px;
+    // height: 35px;
+    border: 3px solid lighten(@maincolor, 74%);
+    border-radius: 50%;
+  }
+
+  &__item a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+
+    svg {
+      fill: @addition;
+    }
+  }
+}
