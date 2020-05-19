@@ -20,16 +20,21 @@
 
   &__item:last-child {
     margin-bottom: 0;
+
+    .lenta__description{
+      padding-top: 20px;
+    }
   }
 
   &__description {
     display: flex;
     flex-direction: column;
     background-color: @mainbackground;
-    padding: 20px 10px 20px 17px;
+    padding: 17px 10px 22px 18px;
   }
 
   &__author {
+    line-height: 1.8;
     font-style: normal;
   }
 
@@ -45,14 +50,17 @@
   }
 
   &__text {
+    line-height: 1.75;
+    letter-spacing: 0.3px;
     margin: 0;
-    margin-bottom: 14px;
+    margin-bottom: 11px;
   }
 
   &__like {
     display: flex;
     font-size: 12px;
     line-height: 1.8;
+    letter-spacing: 0.2px;
     text-transform: uppercase;
     color: @addition;
 
