@@ -1,10 +1,10 @@
 .button__oval {
+  cursor: pointer;
   border: 3px solid @contrastmaincolor;
   border-radius: 30px;
   color: @contrastmaincolor;
   font-family: "Open Sans Bold", sans-serif;
   text-align: center;
-  // padding: 12px 0;
   padding-top: 11px;
   padding-bottom: 13px;
   text-decoration: none;
@@ -17,6 +17,16 @@ button.button--active {
 
 .button--deactive {
   opacity: 0.1;
+}
+
+.button__rectangle {
+  cursor: pointer;
+  width: auto;
+  padding: 17px;
+  background-color: @buttoncolor;
+  border: solid 2px @buttoncolor;
+  border-radius: 3px;
+  color: @contrastmaincolor;
 }
 
 // *** КНОПКА МЕНЮ ***

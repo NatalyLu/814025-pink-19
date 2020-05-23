@@ -1,0 +1,195 @@
+.form {
+  margin-bottom: 60px;
+
+  fieldset {
+    border: none;
+  }
+
+  //input-text
+  &__input {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 21px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    span {
+      color: @addition;
+      text-transform: uppercase;
+      padding-left: 22px;
+      margin-bottom: 10px;
+    }
+
+    input {
+      font-size: 18px;
+      line-height: 1.2;
+      padding: 20px 20px 18px 20px;
+      letter-spacing: 0.4px;
+      border: solid 2px @tableborder;
+
+      &::placeholder {
+        color: @maincolor;
+      }
+    }
+  }
+
+  //input-checkbox
+  &__checkbox {
+    font-size: 18px;
+    margin-bottom: 44px;
+
+    label {
+      cursor: pointer;
+    }
+
+    label::before {
+      content: "";
+      width: 34px;
+      height: 34px;
+
+      display: inline-block;
+      vertical-align: middle;
+      background-color: @contrastmaincolor;
+      border: 2px solid @tableborder;
+      margin-right: 32px;
+    }
+
+    input {
+      display: none;
+    }
+
+    input:checked + label::before {
+      background-image: url('data:image/svg+xml;utf8,<svg fill="rgb(210, 40, 86)" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="22px" height="16px" viewBox="-82.357 4.875 21.698 16.09" enable-background="new -82.357 4.875 21.698 16.09" xml:space="preserve"><path d="M-60.953,5.167c-0.391-0.391-1.023-0.391-1.414,0L-75.75,18.551l-4.9-4.9c-0.391-0.391-1.023-0.391-1.414,0 s-0.391,1.023,0,1.414l5.607,5.607c0.195,0.195,0.451,0.293,0.707,0.293s0.512-0.098,0.707-0.293l14.09-14.0 C-60.562,6.191-60.562,5.558-60.953,5.167z"/></svg>');
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  //input radio-button
+  &__radio-button {
+    font-size: 18px;
+    margin-bottom: 36px;
+
+    label {
+      position: relative;
+      cursor: pointer;
+    }
+
+    label::before {
+      content: "";
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+
+      display: inline-block;
+      vertical-align: middle;
+      background-color: @contrastmaincolor;
+      border: 2px solid @tableborder;
+      margin-right: 30px;
+    }
+
+    input {
+      display: none;
+    }
+
+    input:checked + label::after {
+      content: "";
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      background-color: @addition;
+      border-radius: 50%;
+      top: 7px;
+      left: 12px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  // input teaxarea
+  &__textarea {
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    line-height: 1.7;
+    width: 100%;
+    padding: 15px 16px 32px 17px;
+    resize: none;
+    box-sizing: border-box;
+    border: 2px solid @tableborder;
+
+    &::placeholder {
+      color: @maincolor;
+    }
+  }
+
+  &__legend {
+    padding: 0 20px;
+    line-height: 1.3;
+    text-align: center;
+    text-transform: uppercase;
+    color: @addition;
+  }
+
+  &__fio {
+    padding: 0 @indentmobile;
+    margin: 0 0 42px 0;
+  }
+
+  &__achivement {
+    margin: 0 0 36px 0;
+    padding: 38px @indentmobile 42px @indentmobile;
+    background-color: @mainbackground;
+
+    .form__legend {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__user-info {
+    margin: 0 0 42px 0;
+    padding: 0 @indentmobile;
+  }
+
+  &__application {
+    padding: 38px @indentmobile 41px @indentmobile;
+    margin: 0 0 37px 0;
+    background-color: @mainbackground;
+
+    .form__legend {
+      margin-bottom: 36px;
+    }
+  }
+
+  &__your-emotion {
+    padding: 0 @indentmobile;
+    margin-bottom: 49px;
+
+    .form__legend {
+      margin-bottom: 17px;
+    }
+  }
+
+  &__button {
+    margin: 0 @indentmobile 40px @indentmobile;
+    font-family: "Open Sans Bold", sans-serif;
+    font-size: 18px;
+    text-transform: uppercase;
+  }
+
+  &__extra-text {
+    text-align: center;
+    text-transform: uppercase;
+
+    span {
+      color: @addition;
+    }
+  }
+}
