@@ -1,22 +1,75 @@
 .button__oval {
+  cursor: pointer;
   border: 3px solid @contrastmaincolor;
   border-radius: 30px;
   color: @contrastmaincolor;
   font-family: "Open Sans Bold", sans-serif;
   text-align: center;
-  // padding: 12px 0;
   padding-top: 11px;
   padding-bottom: 13px;
   text-decoration: none;
+
+  &:hover,
+  &:active {
+    color: @addition;
+    background-color: @contrastmaincolor;
+  }
+
+  &:active {
+    color: lighten(@addition, 30%);
+  }
 }
 
 button.button--active {
   color: @addition;
   border-color: @addition;
+
+  &:hover {
+    color: @contrastmaincolor;
+    border-color: @addition;
+    background-color: @addition;
+  }
+
+  &:active {
+    color: fade(@contrastmaincolor, 30%);
+  }
 }
 
 .button--deactive {
   opacity: 0.1;
+
+  &:hover {
+    color: @maincolor;
+    opacity: 0.3;
+  }
+
+  &:active {
+    background-color: @maincolor;
+    color: fade(@contrastmaincolor, 30%);
+  }
+}
+
+.button__rectangle {
+  cursor: pointer;
+  width: auto;
+  padding: 17px;
+  background-color: @buttoncolor;
+  border: solid 2px @buttoncolor;
+  border-radius: 3px;
+  color: @contrastmaincolor;
+
+  &:hover {
+    background-color: @buttoncolorhover;
+    border-color: @buttoncolorhover;
+  }
+
+  &:focus {
+    color: fade(@contrastmaincolor, 30%);
+  }
+
+  &:disabled {
+    opacity: 0.3;
+  }
 }
 
 // *** КНОПКА МЕНЮ ***
@@ -24,6 +77,22 @@ button.button--active {
   width: 50px;
   height: 20px;
   cursor: pointer;
+
+  &:hover {
+    span,
+    span::after,
+    span::before {
+      background-color: @addition;
+    }
+  }
+
+  &:active {
+    span,
+    span::after,
+    span::before {
+      opacity: 0.3;
+    }
+  }
 
   &__input,
   & {

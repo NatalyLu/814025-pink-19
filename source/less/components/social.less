@@ -1,0 +1,31 @@
+.social {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  &__item {
+    position: relative;
+    border: 3px solid lighten(@maincolor, 74%);
+    border-radius: 50%;
+
+    &:hover {
+      border-color: @maincolor;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+
+  &__item a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+
+    svg {
+      fill: @addition;
+    }
+  }
+}

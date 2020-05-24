@@ -40,6 +40,14 @@
       padding-bottom: 19px;
       text-align: center;
       width: 100%;
+
+      &:hover {
+        color: @addition;
+      }
+
+      &:active {
+        opacity: 0.3;
+      }
     }
 
     li:last-child a {
@@ -49,6 +57,12 @@
 
     .main-nav__item--active {
       border-top: none;
+
+      a:hover,
+      a:active {
+        color: @contrastmaincolor;
+        opacity: 1;
+      }
     }
   }
 }
