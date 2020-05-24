@@ -6,6 +6,7 @@
   &__item {
     display: flex;
     flex-direction: column;
+    position: relative;
     margin: 0 @indentmobile 20px @indentmobile;
   }
 
@@ -24,6 +25,19 @@
     .lenta__description {
       padding-top: 20px;
     }
+  }
+
+  &__photo-of-the-day::before {
+    content: "ПАНОРАМА ДНЯ";
+    position: absolute;
+    top: 0;
+    right: 20px;
+    font-weight: bold;
+    font-size: 12px;
+    letter-spacing: .5px;
+    padding: 5px 21px;
+    color: @contrastmaincolor;
+    background-color: @addition;
   }
 
   &__description {
