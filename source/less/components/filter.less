@@ -37,11 +37,17 @@
   }
 
   &__item {
+    cursor: pointer;
     fill: @maincolor;
     opacity: 0.3;
+
+    &:hover {
+      opacity: 0.5;
+    }
   }
 
-  &__item--active {
+  &__item--active,
+  &__item--active:hover {
     fill: @addition;
     opacity: 1;
   }
@@ -61,10 +67,10 @@
     font-size: 18px;
     line-height: 1.35;
     margin-bottom: 13px;
-  }
 
-  &__button:last-child {
-    margin-bottom: 0;
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
   &__scale {
@@ -86,6 +92,10 @@
       background-color: @mainbackground;
       right: 55px;
       bottom: -7px;
+
+      &:active {
+        background-color: @addition;
+      }
     }
   }
 }

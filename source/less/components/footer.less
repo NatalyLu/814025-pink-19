@@ -6,6 +6,18 @@
 
   &__logo {
     margin-bottom: 35px;
+
+    &:hover g path {
+      fill: @addition;
+    }
+
+    &:active {
+      opacity: 0.3;
+
+      g path {
+        fill: @maincolor;
+      }
+    }
   }
 
   &__social {
@@ -26,6 +38,14 @@
 
       svg {
         fill: @addition;
+      }
+
+      &:hover svg {
+        fill: @maincolor;
+      }
+
+      &:active svg {
+        opacity: 0.3;
       }
     }
   }

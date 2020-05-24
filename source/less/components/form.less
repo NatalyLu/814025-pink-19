@@ -32,6 +32,14 @@
       &::placeholder {
         color: @maincolor;
       }
+
+      &:hover {
+        border-color: @maincolor;
+      }
+
+      &:focus {
+        border-color: @addition;
+      }
     }
   }
 
@@ -39,10 +47,6 @@
   &__checkbox {
     font-size: 18px;
     margin-bottom: 44px;
-
-    label {
-      cursor: pointer;
-    }
 
     label::before {
       content: "";
@@ -56,6 +60,10 @@
       margin-right: 32px;
     }
 
+    label {
+      cursor: pointer;
+    }
+
     input {
       display: none;
     }
@@ -64,6 +72,11 @@
       background-image: url('data:image/svg+xml;utf8,<svg fill="rgb(210, 40, 86)" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="22px" height="16px" viewBox="-82.357 4.875 21.698 16.09" enable-background="new -82.357 4.875 21.698 16.09" xml:space="preserve"><path d="M-60.953,5.167c-0.391-0.391-1.023-0.391-1.414,0L-75.75,18.551l-4.9-4.9c-0.391-0.391-1.023-0.391-1.414,0 s-0.391,1.023,0,1.414l5.607,5.607c0.195,0.195,0.451,0.293,0.707,0.293s0.512-0.098,0.707-0.293l14.09-14.0 C-60.562,6.191-60.562,5.558-60.953,5.167z"/></svg>');
       background-repeat: no-repeat;
       background-position: center;
+      border-color: @addition;
+    }
+
+    input:hover + label::before {
+      border-color: @maincolor;
     }
 
     &:last-child {
@@ -107,6 +120,14 @@
       border-radius: 50%;
       top: 7px;
       left: 12px;
+    }
+
+    input:checked + label::before {
+      border-color: @addition;
+    }
+
+    input:hover + label::before {
+      border-color: @maincolor;
     }
 
     &:last-child {

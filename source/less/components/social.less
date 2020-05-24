@@ -7,6 +7,14 @@
     position: relative;
     border: 3px solid lighten(@maincolor, 74%);
     border-radius: 50%;
+
+    &:hover {
+      border-color: @maincolor;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 
   &__item a {
