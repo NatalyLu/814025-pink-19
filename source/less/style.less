@@ -5,6 +5,7 @@
 @import url("components/download.less");
 @import url("components/advantages.less");
 @import url("components/adv-list.less");
+@import url("components/effect.less");
 @import url("components/slider.less");
 @import url("components/button.less");
 @import url("components/reviews.less");
@@ -26,12 +27,17 @@
 @mainbackground:#f2f2f2;
 @tableborder: #e5e5e5;
 @maincolor: #283645; // #1d2631;
+@background-color: #dedede;
 @shadowLight: rgba(255, 255, 255, 0.15); // #485461;
 @shadowDark: black;
 @buttoncolor: #2aab6d;
 @buttoncolorhover: #1c9b5e;
 
 @indentmobile: 20px;
+@indenttablet: 20px;
+
+@tablet-width: 660px;
+@desktop-width: 1200px;
 
 @font-face {
   font-family: "Open Sans";
@@ -52,14 +58,22 @@
 }
 
 body {
-  .block-center;
-  width: 320px;
+  // .block-center;
+  min-width: 320px;
   font-family: "Open Sans", sans-serif;
   font-size: 18px;
   color: @maincolor;
+  .block-center;
 }
 
 img {
   max-width: 100%;
   height: auto;
+}
+
+.main {
+  @media (min-width: @tablet-width) {
+    width: @tablet-width;
+    .block-center;
+  }
 }

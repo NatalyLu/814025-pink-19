@@ -1,13 +1,16 @@
 .download {
   display: flex;
   flex-direction: column;
-  // justify-content: space-between;
   flex-wrap: wrap;
   align-items: center;
 
   &__button {
     width: 275px;
     margin-bottom: 32px;
+
+    @media (min-width: @tablet-width) {
+      width: 98%;
+    }
   }
 
   &__for-system {
@@ -18,10 +21,17 @@
     line-height: 24px;
     margin-bottom: 30px;
   }
+
+  @media (min-width: @tablet-width) {
+    padding: 0 @indenttablet 48px @indenttablet;
+    width: 300px;
+    margin-top: -290px;
+    align-items: flex-start;
+  }
 }
 
 .download__system-list {
-  .drop__list-style();
+  .drop__list-style;
   display: flex;
   justify-content: space-evenly;
   align-items: center;

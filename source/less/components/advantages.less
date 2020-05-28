@@ -9,6 +9,21 @@
     color: @maincolor;
     text-align: center;
     padding-bottom: 29px;
+
+    @media (min-width: @tablet-width) {
+      font-size: 40px;
+      padding-bottom: 0px;
+    }
+
+    &:nth-child(2) {
+      @media (min-width: @tablet-width) {
+        padding: 0 50px;
+      }
+    }
+  }
+
+  svg {
+    right: 200px;
   }
 
   &__title:first-child {
