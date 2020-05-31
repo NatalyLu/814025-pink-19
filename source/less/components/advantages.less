@@ -2,22 +2,29 @@
   background-color: @mainbackground;
 
   &__title {
+    position: relative;
     font-family: "Open Sans Light", sans-serif;
     font-size: 24px;
     line-height: 1.2;
     background-color: @contrastmaincolor;
     color: @maincolor;
+    display: flex;
+    flex-direction: column;
     text-align: center;
-    padding-bottom: 29px;
+    margin-bottom: 86px;
 
-    @media (min-width: @tablet-width) {
-      font-size: 40px;
-      padding-bottom: 0;
-    }
+    div {
+      margin-bottom: 29px;
 
-    &:nth-child(2) {
       @media (min-width: @tablet-width) {
-        padding: 0 50px;
+        font-size: 40px;
+        padding-bottom: 0;
+      }
+
+      &:nth-child(2) {
+        @media (min-width: @tablet-width) {
+          padding: 0 50px;
+        }
       }
     }
   }

@@ -24,12 +24,6 @@
     @media (min-width: @tablet-width) {
       margin-bottom: 0;
     }
-
-    &--photo,
-    &--form {
-      background-position: top;
-      margin-bottom: 0;
-    }
   }
 
   &__logo {
@@ -46,7 +40,6 @@
 
   &__title {
     margin: 0;
-    padding-top: 23px;
     align-self: center;
     text-align: center;
     line-height: 30px;
@@ -55,16 +48,6 @@
     font-size: 24px;
     margin-bottom: 28px;
 
-    &--photo {
-      padding-top: 29px;
-      margin-bottom: 80px;
-    }
-
-    &--form {
-      padding-top: 30px;
-      margin-bottom: 53px;
-    }
-
     @media (min-width: @tablet-width) {
       padding-top: 90px;
       padding-left: 65px;
@@ -72,6 +55,37 @@
       font-size: 40px;
       line-height: 1.2;
       align-self: flex-start;
+    }
+  }
+
+  &--photo,
+  &--form {
+    margin-bottom: 45px;
+
+    .page-header__nav {
+      background-position: left 0 bottom -200px;
+      margin-bottom: 0;
+    }
+  }
+
+  &--photo {
+    .main-nav {
+      margin-bottom: 52px;
+    }
+
+    .page-header__title {
+      margin-bottom: 80px;
+    }
+  }
+
+  &--form {
+    .page-header__title {
+      padding-top: 0;
+      margin-bottom: 53px;
+    }
+
+    .main-nav {
+      margin-bottom: 53px;
     }
   }
 }
