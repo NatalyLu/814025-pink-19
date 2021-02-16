@@ -2,6 +2,26 @@
   position: relative;
   margin-bottom: 23px;
 
+  // &__wrapper {
+  //   max-width: @desktop-width;
+  //   position: absolute;
+  //   top: 0;
+  //   .block-center;
+  //   // display: block;
+  // }
+
+  &__burger-input,
+  &__burger-lines {
+    top: 19px;
+    right: 20px;
+
+    @media (min-width: @tablet-width) {
+      top: 44px;
+    }
+
+    @media (min-width: @desktop-width) {}
+  }
+
   &__first-line-menu {
     display: block;
     width: 100%;
@@ -9,6 +29,16 @@
     height: 68px;
     background-color: rgba(@shadowDark, 0.2);
     transition: 0.3s linear;
+
+    div {
+      max-width: @desktop-width;
+      position: relative;
+      .block-center;
+    }
+
+    @media (min-width: @tablet-width) {
+      height: 110px;
+    }
   }
 
   &__list {
