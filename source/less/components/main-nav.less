@@ -2,6 +2,10 @@
   position: relative;
   margin-bottom: 23px;
 
+  @media (min-width: @tablet-width) {
+    margin-bottom: 74px;
+  }
+
   // &__wrapper {
   //   max-width: @desktop-width;
   //   position: absolute;
@@ -87,8 +91,6 @@
     }
 
     .main-nav__item--active {
-      border-top: none;
-
       a:hover,
       a:active {
         color: @contrastmaincolor;
