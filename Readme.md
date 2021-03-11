@@ -1,7 +1,7 @@
 # Личный проект «Пинк» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Наталья Лукашина](https://up.htmlacademy.ru/adaptive/19/user/814025).
-* Наставник: `Виктор Гирда`.
+* Наставник: ``.
 
 ---
 
